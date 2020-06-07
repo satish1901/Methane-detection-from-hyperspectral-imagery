@@ -1,0 +1,6 @@
+#!bin/bash
+cd /media/carlos/thanos/skeleton-custom-mask-rcnn
+workon mask_rcnn
+(mask_rcnn)CUDA_VISIBLE_DEVICES=0 python boats.py --mode train
+(mask_rcnn)python boats.py --mode predict --image example_boats/frame4580.png
+
