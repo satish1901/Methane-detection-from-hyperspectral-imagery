@@ -1,0 +1,2 @@
+recursive-include spectral *py
+include *.txt

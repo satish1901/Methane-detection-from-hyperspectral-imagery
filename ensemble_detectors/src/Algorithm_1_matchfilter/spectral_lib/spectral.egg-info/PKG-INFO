@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: spectral
+Version: 0.19
+Summary: Spectral Python (SPy) is a Python module for hyperspectral image processing.
+Home-page: http://spectralpython.net
+Author: Thomas Boggs
+Author-email: thomas.boggs@gmail.com
+License: GPL
+Download-URL: https://github.com/spectralpython/spectral/releases/latest
+Description: Spectral Python (SPy) is a pure Python module for
+        processing hyperspectral image data (imaging spectroscopy data). It has
+        functions for reading, displaying, manipulating, and classifying hyperspectral
+        imagery. SPy is Free, Open Source Software (FOSS) distributed under the GNU
+        General Public License.
+Platform: Platform-Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
