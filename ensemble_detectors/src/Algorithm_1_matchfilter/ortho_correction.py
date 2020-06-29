@@ -137,17 +137,16 @@ for fname in FILES:
     print(glt_img, glt_hdr)
     mf_folder = f'{DIRECTORY}/{fname}/{fname_glt}_rdn_v1f_clip_mfout'    
 
-    #Read the manually computed offset file
-    f = open('./manual_offset.json')
-    offset_data = json.load(f)
-    OFFSET_DICT = offset_data['OFFSET_DICT']
-    if (fname_glt not in OFFSET_DICT.keys()):
-        continue
-    if (os.path.exists(glt_hdr)):
-        glt_data_obj = image_obj(glt_hdr, glt_img)
-        glt = glt_data_obj.read_bands([0,1])
-    else:
-        continue
+    try:
+        if (fname_glt not in OFFSET_DICT.keys()):
+            continue
+        if (os.path.exists(glt_hdr)):
+            glt_data_obj = image_obj(glt_hdr, glt_img)
+            glt = glt_data_obj.read_bands([0,1])
+        else:
+            continue
+    except:
+        pass
 
     #mf_rect_path = f'/media/data/satish/detector_bank_input/corrected_output'
     mf_rect_folder = f'{DIRECTORY}/{fname}/{fname_glt}_rect'
