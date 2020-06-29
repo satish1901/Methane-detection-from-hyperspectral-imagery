@@ -24,14 +24,17 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("aviris_data_loader")
 coloredlogs.install(level='DEBUG', logger=logger)
 
-DIRECTORY = "/media/data/satish/avng.jpl.nasa.gov/pub/test_unrect"
+DIRECTORY = "../../data/raw_data"
 FILES = []
 for x in os.listdir(DIRECTORY):        
     if(os.path.isdir(os.path.join(DIRECTORY, x))):
         FILES.append(x)
 print(FILES)
-t_sig_path = f'{DIRECTORY}/methane_signature.txt'
-t_mean = np.loadtxt(t_sig_path)[:,-1]
+
+#load gas signature
+t_sig_path = "../../data/gas_signature/"
+t_mean = np.loadtxt(os.path.join(t_sig_path, os.listdir(t_sig_path)[0]))[:,-1]
+print(t_mean.shape)
 
 #If target signature is not available then we can compute from the image itself to get rogh estimate.
 class target_sig:

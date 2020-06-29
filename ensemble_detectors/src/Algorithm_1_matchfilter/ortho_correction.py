@@ -25,7 +25,18 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("aviris_data_loader")
 coloredlogs.install(level='DEBUG', logger=logger)
 
-DIRECTORY = os.path.abspath("/media/data/satish/avng.jpl.nasa.gov/pub/test_unrect")
+DIRECTORY = "../../data/raw_data"
+
+#manual offset file load
+try:
+    #Read the manually computed offset file
+    f = open('./manual_offset.json')
+    offset_data = json.load(f)
+    OFFSET_DICT = offset_data['OFFSET_DICT']
+except:
+    print("No manual offset file found")
+    pass
+
 FILES = []
 for x in os.listdir(DIRECTORY):        
     if(os.path.isdir(os.path.join(DIRECTORY, x))):
@@ -138,10 +149,9 @@ for fname in FILES:
     else:
         continue
 
-    mf_rect_path = f'/media/data/satish/detector_bank_input/corrected_output'
-    mf_rect_folder = f'{mf_rect_path}/{fname_glt}_rect'
+    #mf_rect_path = f'/media/data/satish/detector_bank_input/corrected_output'
+    mf_rect_folder = f'{DIRECTORY}/{fname}/{fname_glt}_rect'
     if not(os.path.isdir(mf_rect_folder)):
-        print("something")
         os.mkdir(mf_rect_folder)
         print("\nDirectory", mf_rect_folder ," created.")
     elif os.path.isdir(mf_rect_folder):
