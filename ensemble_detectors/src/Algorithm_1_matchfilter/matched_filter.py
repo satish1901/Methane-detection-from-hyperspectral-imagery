@@ -25,6 +25,7 @@ logger = logging.getLogger("aviris_data_loader")
 coloredlogs.install(level='DEBUG', logger=logger)
 
 DIRECTORY = "../../data/raw_data"
+#DIRECTORY = "/media/data/satish/avng.jpl.nasa.gov/pub/test_unrect"
 FILES = []
 for x in os.listdir(DIRECTORY):        
     if(os.path.isdir(os.path.join(DIRECTORY, x))):

@@ -25,6 +25,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("aviris_data_loader")
 coloredlogs.install(level='DEBUG', logger=logger)
 
+#DIRECTORY = "/media/data/satish/avng.jpl.nasa.gov/pub/test_unrect"
 DIRECTORY = "../../data/raw_data"
 
 #manual offset file load

@@ -136,12 +136,10 @@ for fname in FILES:
     file_check = f'{DIRECTORY}/{fname}/{fname}_img_mask.png'
     if((os.path.isfile(file_check)) == False):
         continue
+    rname = fname.split("_")[0]
     sname = f'{fname}_img'  #spectral data
-    hname = f'{sname}.hdr'  # header
     mname = f'{sname}_mask.png'  # manual annotated mask
     png_img = f'{DIRECTORY}/{fname}/{mname}'
-    img_img = f'{DIRECTORY}/{fname}/{sname}'
-    hdr_file = f'{DIRECTORY}/{fname}/{hname}'
     png_read = cv2.imread(png_img)
     img_shape = png_read.shape
     tile_size = (256, 256)
@@ -150,7 +148,7 @@ for fname in FILES:
     for i in range(int(math.ceil(img_shape[0]/(offset[1] * 1.0)))):
         for j in range(int(math.ceil(img_shape[1]/(offset[0] * 1.0)))):
             png_mask_file = f'{DIRECTORY}/{fname}/{fname}_img_mask_tiles/{fname}_img_img_radiance_{i}_{j}.png'
-            png_mask_tile_name = f'{sname}_img_radiance_{i}_{j}.npy' #tilename to be written in json file
+            png_mask_tile_name = f'{rname}_rdn_{i}_{j}.npy' #tilename to be written in json file
 
             if os.path.isfile(png_mask_file):
                 print(png_mask_file)

@@ -1,0 +1,6 @@
+#!bin/bash
+cd /home/satish/projects/Methane-detection/ensemble_detectors/src/Algorithm_3_mrcnn/gas_plume_detector
+workon aero_cv
+(mask_rcnn)CUDA_VISIBLE_DEVICES=0 python detector.py --mode train
+(mask_rcnn)python detector.py --mode predict --image sample_images/<image name>
+

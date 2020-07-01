@@ -14,7 +14,7 @@ import spectral as spy
 import spectral.io.envi as envi
 import shutil
 
-#DIRECTORY = "../../data/corrected_output"
+#DIRECTORY = "/media/data/satish/avng.jpl.nasa.gov/pub/test_unrect"
 DIRECTORY = "../../data/raw_data"
 TERRAIN_IMG = "../../data/terrain_img_files"
 PROCESSEDDATA_PATH = "../../data/train_data"
@@ -41,7 +41,12 @@ GLOBAL_RAD = {
 for fname in FILES:
     rect_folder_name = fname.split("_")[0]
     fname_path = f'{DIRECTORY}/{fname}/{rect_folder_name}_rect'
-    for rect_fname in os.listdir(fname_path):
+    try:
+        rect_fname_list = os.listdir(fname_path)
+    except:
+        print("File" ,fname_path," not found,skipping it, probably does not exist in manual_offset list")
+        continue
+    for rect_fname in rect_fname_list:
         print(rect_fname)
         rect_fname_path = f'{fname_path}/{rect_fname}'
         np_file = np.load(rect_fname_path)        
