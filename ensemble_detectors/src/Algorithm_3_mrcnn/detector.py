@@ -274,7 +274,10 @@ if __name__ == "__main__":
 		TRAIN_DIR = "../../data/train_data/"
 		ANNOT_PATH = "../gt_jsonfile/annotation_plumes.json"
 		for train_dir in os.listdir(TRAIN_DIR):
-			IMAGE_PATHS, trainIdxs, valIdxs = init_configs(TRAIN_DIR, train_dir, ANNOT_PATH)
+			if(os.path.isdir(os.path.sep.join([TRAIN_DIR, train_dir]))):
+				IMAGE_PATHS, trainIdxs, valIdxs = init_configs(TRAIN_DIR, train_dir, ANNOT_PATH)
+			else:
+				continue
 			
 			# load the training dataset
 			trainDataset = BoatsDataset(IMAGE_PATHS, ANNOT_PATH,
@@ -319,6 +322,8 @@ if __name__ == "__main__":
 	elif args["mode"] == "predict":
 		output_without_perceptron = 0.0
 		for trained_log in os.listdir(LOGS_AND_MODEL_DIR):
+			if not os.path.isdir(os.path.sep.join([LOGS_AND_MODEL_DIR, trained_log])):
+				continue
 			# initialize the inference configuration
 			config = BoatsInferenceConfig()
 
