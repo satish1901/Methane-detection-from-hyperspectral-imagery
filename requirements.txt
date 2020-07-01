@@ -1,7 +1,7 @@
 absl-py==0.7.1
 astor==0.8.0
 backcall==0.1.0
-bleach==1.5.0
+bleach==3.1.4
 coloredlogs==10.0
 cycler==0.10.0
 decorator==4.4.0
