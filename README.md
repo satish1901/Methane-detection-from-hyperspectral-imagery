@@ -4,6 +4,6 @@
 
 Official repository of our [**WACV 2020**](https://openaccess.thecvf.com/content_WACV_2020/papers/Kumar_Deep_Remote_Sensing_Methods_for_Methane_Detection_in_Overhead_Hyperspectral_WACV_2020_paper.pdf) paper.
 
-![Overview of H-MRCNN](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/overview.gif)
+![Overview of H-MRCNN](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/overview_method.gif)
 ## Citing
 
