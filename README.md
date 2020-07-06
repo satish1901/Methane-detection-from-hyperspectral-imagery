@@ -19,7 +19,7 @@ The whole repo folder structure follows the same style as written in the paper f
 
 ## Citing
 If this work is useful to you, please consider our paper to cite:
-
+```
 @inproceedings{kumar2020deep,
   title={Deep Remote Sensing Methods for Methane Detection in Overhead Hyperspectral Imagery},
   author={Kumar, Satish and Torres, Carlos and Ulutan, Oytun and Ayasse, Alana and Roberts, Dar and Manjunath, BS},
@@ -28,3 +28,4 @@ If this work is useful to you, please consider our paper to cite:
   year={2020},
   organization={IEEE}
 }
+```
