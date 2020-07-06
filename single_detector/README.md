@@ -57,12 +57,14 @@ The model architecture shows data flow from left-->right, we have an input image
 ```
 python mask_tiling.py ../data
 ```
-[json_creator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/json_creator.py) : create a json file, considering each tile created in previous step as an individual image, then run DFS(depth first search) along the boundary of each image to create a json of boundary of plumes shapes. It saves the annotation file at "single_detector/src/custom-mask-rcnn-detector/ch4_data/annotation_plumes.json" , To run it
+[json_creator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/json_creator.py) : create a json file, considering each tile created in previous step as an individual image, then run DFS(depth first search) along the boundary of each image to create a json of boundary of plumes shapes. To run it
 ```
 python json_creator.py ../data
+Output location : ./single_detector/src/custom-mask-rcnn-detector/ch4_data/annotation_plumes.json
 
 ```
-[train_data_generator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/train_data_generator.py) : This files creates the training data for our detector, it reads the ~1500 x 23000 x 4 (.envi format) file, process channels 0,1,2 & 3 as show in the image above --> then creates tiles of size (256 x 256 x 3) and saves them as .npy files to be used by detector. It saves the training data at location "single_detector/src/custom-mask-rcnn-detector/ch4_data/train_data". To run it
+[train_data_generator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/train_data_generator.py) : This files creates the training data for our detector, it reads the ~1500 x 23000 x 4 (.envi format) file, process channels 0,1,2 & 3 as show in the image above --> then creates tiles of size (256 x 256 x 3) and saves them as .npy files to be used by detector. To run it
 ```
 python train_data_generator.py ../data
+Output Location : ./single_detector/src/custom-mask-rcnn-detector/ch4_data/train_data/
 ```
