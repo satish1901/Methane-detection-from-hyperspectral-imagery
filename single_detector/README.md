@@ -30,3 +30,17 @@ you will find your processed training data and annotation file at location
 Training Data :  single_detector/src/custom-mask-rcnn-detector/ch4_data/train_data
 Annotations   : single_detector/src/custom-mask-rcnn-detector/ch4_data/annotation_plumes.json
 ```
+To train the detector, Run :
+```
+cd ./single_detector/src/custom-mask-rcnn-detector
+python detector.py --mode train
+```
+The corresponsing trained weight will be stored at :
+```
+Trained weights : ./single_detector/src/custom-mask-rcnn-detector/logs
+```
+- #### Testing the detector
+```
+python detector.py --mode predict -image <path to processed input file to detector>
+```
+Output is generated in the same directory
