@@ -29,9 +29,25 @@ If this work is useful to you, please consider our paper to cite:
   organization={IEEE}
 }
 ```
-## Installation
 
-See [INSTALL.md](INSTALL.md).
+### Requirements
+- Linux or macOS with Python ≥ 3.6
+- Tensorflow <= 1.8
+- CUDA 9.0
+- cudNN (compatible to CUDA)
 
-## Getting Started
+### Installation
+1. Clone this repository
+2. Install dependencies
+```
+pip install -r requirements.txt
+```
+3. Running single-detector is quite simple. Follow the README.md in single_detector folder
+```
+cd single_detector/
+```
+4. For Running ensemble-detector we need some pre-processing. Follow the README.md in emsemble_detector folder
+```
+cd ensemble_detector
+```
 
