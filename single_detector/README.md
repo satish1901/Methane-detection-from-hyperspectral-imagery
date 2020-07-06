@@ -44,3 +44,8 @@ Trained weights : ./single_detector/src/custom-mask-rcnn-detector/logs
 python detector.py --mode predict -image <path to processed input file to detector>
 ```
 Output is generated in the same directory
+
+### Step by Step Detection
+To help with debugging and understanding the model, you can run ([mask_tiling.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/mask_tiling.py), [json_creator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/json_creator.py), [train_data_generator.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/train_data_generator.py)), that allows running the model step by step to inspect the output at each point. Here are few examples :
+
+1. #### Creating tiles of the mask
