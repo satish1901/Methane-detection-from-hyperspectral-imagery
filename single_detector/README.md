@@ -51,7 +51,8 @@ To help with debugging and understanding the model, you can run ([mask_tiling.py
 #### 1. Model Architecture:
 <img src="./.readme_files/single_detector.png" width="700">
 The model architecture shows data flow from left-->right, we have an input image of size ~1500 x 23000 x 4 along with a ground truth file(binary) of size 1500 x 23000 x 1. We tile each image files because of GPU memory constraint
-- #### Ground Truth pre-processing 
+
+#### - Ground Truth pre-processing 
 [mask_tiling.py](https://github.com/satish1901/Methane-detection-from-hyperspectral-imagery/blob/master/single_detector/annotation_tool/mask_tiling.py) : creates tiles size (256 x 256)of the binary mask. Output is saved in the same datafolder. To Run it :
 ```
 python mask_tiling.py ../data
