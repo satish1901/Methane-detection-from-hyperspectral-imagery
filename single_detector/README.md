@@ -24,3 +24,7 @@ or
 (absolute path)[preferred]
 ./data_generator.sh '/home/<username>/Methane-detection-from-hyperspectral-imagery/single_detector/data'
 ```
+- #### Training the detector
+you will find your processed training data and annotation file at location 
+```Training Data :  single_detector/src/custom-mask-rcnn-detector/ch4_data/train_data
+   Annotations   : single_detector/src/custom-mask-rcnn-detector/ch4_data/annotation_plumes.json```
