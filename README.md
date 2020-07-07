@@ -18,7 +18,7 @@ This repository includes:
 The whole repo folder structure follows the same style as written in the paper for easy reproducibility and easy to extend. If you use it in your research, please consider citing our paper (bibtex below)
 
 ## Citing
-If this work is useful to you, please consider our paper to cite:
+If this work is useful to you, please consider citing our paper:
 ```
 @inproceedings{kumar2020deep,
   title={Deep Remote Sensing Methods for Methane Detection in Overhead Hyperspectral Imagery},
