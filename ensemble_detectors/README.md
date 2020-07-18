@@ -50,6 +50,23 @@ Annotations   : ensemble_detectors/src/gt_jsonfile
 cd ./ensemble_detectors/src/Algorithm_3_mrcnn/mask_rcnn
 python setup.py install
 ```
+To train the detector, Run
+```
+cd ./ensemble_detectors/src/Algorithm_3_mrcnn
+python detector.py --mode train
+```
+The corresponsing trained weight will be stored at below location. For each detector trained, the corresponding weights are stored in the folder with name
+for example :
+```
+./logs/ _ _ 0-50
+         |_ 25-75
+         |_ 50-100
+         |_ 75-125 
+and so on
+
+Trained weights : ./ensemble_detectors/src/Algorithm_3_mrcnn/logs
+```
+
 
 
 
