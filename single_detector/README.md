@@ -41,7 +41,7 @@ Trained weights : ./single_detector/src/custom-mask-rcnn-detector/logs
 ```
 - #### Testing the detector
 ```
-python detector.py --mode predict -image <path to processed input file to detector>
+python detector.py --mode predict --image <path to processed input file to detector>
 ```
 Output is generated in the same directory
 
