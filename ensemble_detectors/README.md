@@ -29,4 +29,12 @@ This repo follows the same code execution flow as mentioned in the paper
 2. Algorithm_2_preprocess : Algorithm 2 in paper. It create training data for the detection, terrain_img_creator.py file reads the 0,1,2 bands from the 4-bands data and creates terrain image files. train_data_generator create sets of bands and creates tiles of images to be used in training. Each tile containes 3 bands :- 0-gray scale terrain image, 1-locally normalized output of matched filter, 2-globally normalized out of matched filter
 3. Algorithm_3_mrcnn : Algorithm 3 in paper. It contains our detector network. detector.py is our training/testing file for network
 
+```
 cd ./src
+```
+Run data_generator script.
+```
+./data_generator.sh
+```
+Running time of this script depends on the size of data. It does cumulative work on Algorithm_1_matchfilter & Algorithm_2_preprocess.
+Each hyperspectral image of dim : 22,000 x 1500 x 432 takes ~15 minutes of time to generate output
