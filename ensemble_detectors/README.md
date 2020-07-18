@@ -3,3 +3,7 @@ Ensemble detector works on raw input data (un-rectified)[Dataset B in paper]. Ea
 
 <img src="./.readme_files/method_overview.png" width="600">
 
+### Getting Started
+- If using virtual environment, activate your virtual env
+- 
+
