@@ -62,11 +62,14 @@ for example :
          |_ 25-75
          |_ 50-100
          |_ 75-125 
-and so on
+and so on ...
 
 Trained weights : ./ensemble_detectors/src/Algorithm_3_mrcnn/logs
 ```
-
+- #### Testing the detector
+```
+python detector.py --mode predict --image <path to processed input file each file for each set of channels/bands>
+```
 
 
 
