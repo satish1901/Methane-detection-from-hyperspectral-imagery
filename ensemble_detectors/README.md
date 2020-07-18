@@ -6,6 +6,9 @@ Ensemble detector works on raw input data (un-rectified)[Dataset B in paper]. Ea
 ### Getting Started
 - If using virtual environment, activate your virtual env
 - #### Getting annotation data ready
+```
+cd ./ensemble_detectors
+```
  
  Run annotation_generator.sh. This script takes 1 argument (path to ground truth "./data/gt_data" data)
  
@@ -16,5 +19,14 @@ Ensemble detector works on raw input data (un-rectified)[Dataset B in paper]. Ea
  or
  (absolute path)[preferred]
  ./annotation_generator.sh '/home/<username>/Methane-detection-from-hyperspectral-imagery/ensemble_detectors/data/gt_data'
- ```
  
+ Annotation file saved at : Methane-detection-from-hyperspectral-imagery/ensemble_detectors/src/gt_jsonfile
+ ```
+
+- #### Generating  training data for our detector
+This repo follows the same code execution flow as mentioned in the paper
+1. Algorithm_1_matchfilter
+2. Algorithm_2_preprocess
+3. Algorithm_3_mrcnn
+
+cd ./src
