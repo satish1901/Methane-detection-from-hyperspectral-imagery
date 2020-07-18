@@ -5,5 +5,14 @@ Ensemble detector works on raw input data (un-rectified)[Dataset B in paper]. Ea
 
 ### Getting Started
 - If using virtual environment, activate your virtual env
-- 
-
+- #### Getting annotation data ready
+ Run annotation_generator.sh. This script takes 1 argument (path to ground truth "./data/gt_data" data)
+ ```
+ ./annotation_generator.sh <path to ground truth data directory>
+ e.g.
+ (relative path) ./annotation_generator.sh '../data/gt_data'
+ or
+ (absolute path)[preferred]
+ ./annotation_generator.sh '/home/<username>/Methane-detection-from-hyperspectral-imagery/ensemble_detectors/data/gt_data'
+ ```
+ 
