@@ -39,13 +39,17 @@ Run data_generator script.
 Running time of this script depends on the size of data. It does cumulative work on Algorithm_1_matchfilter & Algorithm_2_preprocess.
 Each hyperspectral image of dim : 22,000 x 1500 x 432 takes ~15 minutes of time to generate output
 
-- ### Training the ensemble of detector
+- #### Training the ensemble of detector
 you will find your processed training data and annotation file at below location
 ```
 Training Data : ensemble_detectors/data/train_data
 Annotations   : ensemble_detectors/src/gt_jsonfile
 ```
-
+##### Setup detector code
+```
+cd ./ensemble_detectors/src/Algorithm_3_mrcnn/mask_rcnn
+python setup.py install
+```
 
 
 
