@@ -23,7 +23,7 @@ cd ./ensemble_detectors
  Annotation file saved at : Methane-detection-from-hyperspectral-imagery/ensemble_detectors/src/gt_jsonfile
  ```
 
-- #### Generating  training data for our detector
+- #### Generating  training data for the detector
 This repo follows the same code execution flow as mentioned in the paper
 1. Algorithm_1_matchfilter : Algorithm 1 in paper. It runs matched filer on the raw hyperspectral data files and then runs ortho correction to rectify the data
 2. Algorithm_2_preprocess : Algorithm 2 in paper. It create training data for the detection, terrain_img_creator.py file reads the 0,1,2 bands from the 4-bands data and creates terrain image files. train_data_generator create sets of bands and creates tiles of images to be used in training. Each tile containes 3 bands :- 0-gray scale terrain image, 1-locally normalized output of matched filter, 2-globally normalized out of matched filter
