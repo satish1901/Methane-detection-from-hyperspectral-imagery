@@ -1,9 +1,8 @@
 # USAGE
-# python boats.py --mode train
-# python boats.py --mode investigate
-# python boats.py --mode predict --image examples/boats_01.jpg
-# python boats.py --mode predict --image examples/boats_01.jpg \
-# 	--weights logs/boats20181018T0624/mask_rcnn_boats_0015.h5
+# python detector.py --mode train
+# python detector.py --mode predict --image <path to image file>
+# python detector.py --mode predict --image <path to image file> \
+# 	--weights logs/<set-band folder name>/mask_rcnn_boats_0015.h5
 
 # import the necessary boats
 from mrcnn.config import Config
