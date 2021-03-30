@@ -33,7 +33,7 @@ Pillow
 prompt-toolkit==2.0.9
 protobuf==3.9.0
 ptyprocess==0.6.0
-Pygments==2.4.2
+Pygments==2.7.4
 pyparsing==2.4.0
 python-dateutil==2.8.0
 PyWavelets==1.0.3
