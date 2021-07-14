@@ -15,6 +15,10 @@ This repository includes:
 * Modified spectral library of python
 * Example of training on your own dataset
 
+![supported versions](https://img.shields.io/badge/python-(3.5--3.8)-brightgreen/?style=flat&logo=python&color=green)
+![Library](https://img.shields.io/badge/Library-TensorFlow-blue)
+![GitHub license](https://img.shields.io/cocoapods/l/AFNetworking)
+
 The whole repo folder structure follows the same style as written in the paper for easy reproducibility and easy to extend. If you use it in your research, please consider citing our paper (bibtex below)
 
 ## Citing
