@@ -8,7 +8,7 @@ decorator==4.4.0
 gast==0.2.2
 grpcio==1.22.0
 h5py==2.9.0
-html5lib==0.9999999
+html5lib==0.999999999
 humanfriendly==4.18
 imageio==2.5.0
 imutils==0.5.2
